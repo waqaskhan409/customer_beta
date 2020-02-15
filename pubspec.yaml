@@ -171,6 +171,18 @@ flutter:
     - assets/images/time_in2.png
     - assets/images/time_out.png
     - assets/images/time_out2.png
+    - assets/images/1-search_location.png
+    - assets/images/2-date.png
+    - assets/images/3-time.png
+    - assets/images/4-care-recipient.png
+    - assets/images/5-male_active.png
+    - assets/images/5-male.png
+    - assets/images/6-female_active.png
+    - assets/images/6-female.png
+    - assets/images/elderly_care_active.png
+    - assets/images/elderly_care.png
+    - assets/images/post_op.png
+    - assets/images/post_op_active.png
 
 
 
