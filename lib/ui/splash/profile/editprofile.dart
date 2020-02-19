@@ -1,10 +1,11 @@
 import 'dart:io';
 
 import 'package:customer_beta/ui/splash/profile/changepassword.dart';
-import 'package:customer_beta/ui/splash/profile/editcertificates.dart';
 import 'package:customer_beta/ui/splash/profile/editicpassportvisa.dart';
 import 'package:customer_beta/ui/splash/profile/editpersonalinformation.dart';
 import 'package:flutter/material.dart';
+
+import 'edittobecared.dart';
 
 class EditProfile extends StatefulWidget {
   @override
@@ -36,6 +37,36 @@ class _EditProfileState extends State<EditProfile> {
       ),
       body: Column(
         children: <Widget>[
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (_){
+                    return MyCareProfile();
+                  }
+              ));
+            },
+            child: Container(
+              margin: EdgeInsets.fromLTRB(20.0, 15.0, .0, 15.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.fromLTRB(20.0, .0, .0, .0),
+                    child: Text(
+                      "My Care Profile",
+                      style: TextStyle(color: Colors.black54),
+                    ),
+                  ),
+                  Spacer(),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(.0, .0, 20.0, .0),
+                    child: Icon(Icons.arrow_forward_ios, color: Colors.black54,),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Divider(),
           GestureDetector(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(
@@ -96,36 +127,7 @@ class _EditProfileState extends State<EditProfile> {
             ),
           ),
           Divider(),
-          GestureDetector(
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(
-                  builder: (_){
-                    return EditCertificates();
-                  }
-              ));
-            },
-            child: Container(
-              margin: EdgeInsets.fromLTRB(20.0, 15.0, .0, 15.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.fromLTRB(20.0, .0, .0, .0),
-                    child: Text(
-                      "Edit Certificates",
-                      style: TextStyle(color: Colors.black54),
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(.0, .0, 20.0, .0),
-                    child: Icon(Icons.arrow_forward_ios, color: Colors.black54,),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Divider(),
+
           GestureDetector(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(

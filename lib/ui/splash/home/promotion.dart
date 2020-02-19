@@ -1,3 +1,4 @@
+import 'package:customer_beta/ui/splash/booking/booking.dart';
 import 'package:flutter/material.dart';
 
 class Promotions extends StatefulWidget {
@@ -53,7 +54,12 @@ class _PromotionsState extends State<Promotions> {
                   return GestureDetector(
                     onTap: (){
                       //TODO setting booking
-                      print("");
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => BookingOrders(),
+                          ),
+                              (e) => false);
                     },
                     child: Container(
                       margin: EdgeInsets.all(20),

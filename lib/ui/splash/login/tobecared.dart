@@ -133,12 +133,8 @@ class _ToBeCaredState extends State<ToBeCared> {
               children: <Widget>[
                 GestureDetector(
                   onTap: (){
-                    Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => CustomerProfile(),
-                        ),
-                            (e) => false);
+
+                    Navigator.pop(context);
                   },
                   child: Image.asset("assets/images/back.png", width: 70.0, height: 70.0,),
                 ),

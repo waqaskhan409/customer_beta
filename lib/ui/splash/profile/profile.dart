@@ -1,11 +1,16 @@
 import 'package:customer_beta/constants/Constants.dart';
 import 'package:customer_beta/ui/splash/booking/booking.dart';
+import 'package:customer_beta/ui/splash/booking/sendbookingrequest.dart';
 import 'package:customer_beta/ui/splash/chat/chat.dart';
+import 'package:customer_beta/ui/splash/home/bookingrequest.dart';
 import 'package:customer_beta/ui/splash/home/help.dart';
 import 'package:customer_beta/ui/splash/home/home.dart';
 import 'package:customer_beta/ui/splash/login/login.dart';
 import 'package:customer_beta/ui/splash/profile/bankaccount.dart';
+import 'package:customer_beta/ui/splash/profile/creditcardsetup.dart';
+import 'package:customer_beta/ui/splash/profile/editlocation.dart';
 import 'package:customer_beta/ui/splash/profile/editprofile.dart';
+import 'package:customer_beta/ui/splash/profile/persontobecaredlist.dart';
 import 'package:customer_beta/ui/splash/summaries/summaries.dart';
 import 'package:flutter/material.dart';
 import 'package:customer_beta/ui/splash/profile/profile.dart';
@@ -211,11 +216,11 @@ class _ProfileState extends State<Profile> {
                     children: <Widget>[
                       GestureDetector(
                         onTap: () {
-//                          Navigator.push(context, MaterialPageRoute(
-//                              builder: (_){
-//                                return SetSchedule();
-//                              }
-//                          ));
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (_){
+                                return PersonToCared();
+                              }
+                          ));
                         },
                         child: Container(
                           margin: EdgeInsets.fromLTRB(20.0, 15.0, .0, 15.0),
@@ -242,7 +247,7 @@ class _ProfileState extends State<Profile> {
                         onTap: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (_) {
-                            return BankAccount();
+                            return BookingRequest();
                           }));
                         },
                         child: Container(
@@ -388,11 +393,11 @@ class _ProfileState extends State<Profile> {
                     children: <Widget>[
                       GestureDetector(
                         onTap: () {
-//                          Navigator.push(context, MaterialPageRoute(
-//                              builder: (_){
-//                                return Help();
-//                              }
-//                          ));
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (_){
+                                return EditLocation();
+                              }
+                          ));
                         },
                         child: Container(
                           margin: EdgeInsets.fromLTRB(20.0, 15.0, .0, 15.0),
@@ -416,6 +421,13 @@ class _ProfileState extends State<Profile> {
                       ),
                       Divider(),
                       GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (_){
+                                return CreditCardSetup();
+                              }
+                          ));
+                        },
                         child: Container(
                           margin: EdgeInsets.fromLTRB(20.0, 15.0, .0, 15.0),
                           child: Row(

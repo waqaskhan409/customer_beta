@@ -264,12 +264,11 @@ showGender();
                             Spacer(),
                             GestureDetector(
                               onTap: (){
-                                Navigator.pushAndRemoveUntil(
+                                Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                       builder: (_) => ToBeCared(),
-                                    ),
-                                        (e) => false);
+                                    ));
                               },
                               child: Image.asset("assets/images/next.png", width: 70.0, height: 70.0,),
                             )

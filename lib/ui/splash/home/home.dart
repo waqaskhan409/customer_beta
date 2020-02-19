@@ -1,11 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:customer_beta/ui/splash/booking/booking.dart';
 import 'package:customer_beta/ui/splash/chat/chat.dart';
+import 'package:customer_beta/ui/splash/home/bookingrequest.dart';
 import 'package:customer_beta/ui/splash/home/latestnews.dart';
 import 'package:customer_beta/ui/splash/home/myorders.dart';
 import 'package:customer_beta/ui/splash/home/newsdetail.dart';
+import 'package:customer_beta/ui/splash/home/notifications.dart';
 import 'package:customer_beta/ui/splash/home/promotion.dart';
 import 'package:customer_beta/ui/splash/home/tutorials.dart';
+import 'package:customer_beta/ui/splash/login/tobecared.dart';
 import 'package:customer_beta/ui/splash/profile/profile.dart';
 import 'package:customer_beta/ui/splash/summaries/summaries.dart';
 import 'package:flutter/cupertino.dart';
@@ -282,11 +285,11 @@ class _HomeState extends State<Home> {
                       ),
                       GestureDetector(
                         onTap: () {
-//                      Navigator.push(
-//                          context,
-//                          new MaterialPageRoute(
-//                            builder: (_) => LatestNews(),
-//                          ));
+                      Navigator.push(
+                          context,
+                          new MaterialPageRoute(
+                            builder: (_) => BookingRequest(),
+                          ));
                         },
                         child: Column(
                           children: <Widget>[
@@ -350,11 +353,11 @@ class _HomeState extends State<Home> {
                       ),
                       GestureDetector(
                         onTap: (){
-//                      Navigator.push(context, MaterialPageRoute(
-//                          builder: (_){
-//                            return Tutorails();
-//                          }
-//                      ));
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (_){
+                            return Notifications();
+                          }
+                      ));
                         },
                         child: Column(
                           children: <Widget>[
@@ -463,11 +466,30 @@ class _HomeState extends State<Home> {
             margin: EdgeInsets.fromLTRB(20.0, .0, .0, .0),
             child: Row(
               children: <Widget>[
-                Container(
-                  child: Image.asset("assets/images/7-add_person_to_care.png", width: 200, height: 80,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => ToBeCared(),
+                        ));
+                  },
+                  child: Container(
+                    child: Image.asset("assets/images/7-add_person_to_care.png", width: 200, height: 80,),
+                  ),
                 ),
-                Container(
-                  child: Image.asset("assets/images/8-book_now.png", width: 120, height: 55,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => BookingOrders(),
+                        ),
+                            (e) => false);
+                  },
+                  child: Container(
+                    child: Image.asset("assets/images/8-book_now.png", width: 120, height: 55,),
+                  ),
                 )
               ],
             ),

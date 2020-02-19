@@ -689,7 +689,7 @@ class _EditPersonalInformationState extends State<EditPersonalInformation>
     showMaterialDialog<String>(
       context: context,
       child: AlertDialog(
-          title: Text("Select the Education"),
+          title: Text("Select the Race"),
           content: Container(
             margin: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
             width: MediaQuery.of(context).size.width,
